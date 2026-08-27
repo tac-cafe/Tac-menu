@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Primary Meta Tags -->
+    <title>Trattorias Restaurant | Delicious Food & Authentic Dining</title>
+    <meta name="title" content="Trattorias Restaurant | Delicious Food & Authentic Dining">
+    <meta name="description" content="Welcome to Trattorias Restaurant! Explore our menu of mouth-watering dishes, from classic favorites to our chef's recommended specialties. Discover authentic flavors today.">
+    <meta name="keywords" content="Trattorias, restaurant, authentic food, dining, menu, order food, recommended dishes, shawarma, mocktails">
+    <meta name="author" content="Trattorias Restaurant">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trattorias.com/">
+    <meta property="og:title" content="Trattorias Restaurant | Delicious Food & Authentic Dining">
+    <meta property="og:description" content="Welcome to Trattorias Restaurant! Explore our menu of mouth-watering dishes, from classic favorites to our chef's recommended specialties. Discover authentic flavors today.">
+    <meta property="og:image" content="https://trattorias.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trattorias.com/">
+    <meta property="twitter:title" content="Trattorias Restaurant | Delicious Food & Authentic Dining">
+    <meta property="twitter:description" content="Welcome to Trattorias Restaurant! Explore our menu of mouth-watering dishes, from classic favorites to our chef's recommended specialties. Discover authentic flavors today.">
+    <meta property="twitter:image" content="https://trattorias.com/og-image.jpg">
+
+    <!-- Theme Color for mobile browsers -->
+    <meta name="theme-color" content="#4D301B">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    
+</head>
+<body>
+    <!-- Global Loader -->
+    <div id="globalLoader" class="global-loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Mobile Frame Simulation -->
+    <div class="mobile-frame">
+        <!-- Hamburger Menu Overlay -->
+        <div class="nav-menu-overlay" id="navMenu">
+            <div class="nav-menu-content">
+                <div class="nav-menu-header">
+                    <h2 class="cafe-name">Tac Cafe</h2>
+                    <button class="icon-btn" id="closeNavBtn">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <ul class="nav-menu-links">
+                    <li><a href="#" class="nav-link">Main</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="screen-content" id="scroll-container">
+            
+            <!-- 1. Top Header Container -->
+            <header class="hero-header">
+                <div class="top-nav">
+                    <button class="icon-btn" id="openNavBtn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <div class="logo">
+                        <h2 class="cafe-name">Tac Cafe</h2>
+                    </div>
+                    <div style="width: 40px;"></div> <!-- Spacer for flex alignment -->
+                </div>
+
+                <div class="hero-content">
+                    <div class="banner-carousel"></div>
+                    
+                    <div class="carousel-dots"></div>
+                    
+                    <div class="hero-text">
+                        <h1>Launch Your Smart Digital Menu Today</h1>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. Main Content -->
+            <main class="main-content">
+                <div id="main-view" style="min-height: 100vh;">
+                
+                <!-- Sentinel for detecting when nav becomes sticky -->
+                <div id="nav-sentinel" style="position: absolute; top: 0; width: 100%; height: 1px; visibility: hidden; pointer-events: none;"></div>
+
+                <!-- Secondary Content Container (Sticky Elements) -->
+                <div class="sticky-nav-wrapper" id="sticky-nav">
+                    <div class="search-bar">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" placeholder="Search by name, price (e.g. 250)..." />
+                    </div>
+                    
+                    <div class="category-chips" id="category-chips"></div>
+                </div>
+
+                <!-- 3. Main Menu List -->
+                <div class="menu-list"></div> <!-- End menu-list -->
+                
+                <div style="padding: 0 20px;">
+                    <!-- Instagram QR Card -->
+                    <div class="instagram-card-new">
+                        <div class="insta-title">Follow Us On Instagram</div>
+                        <div class="instagram-qr-new">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://www.instagram.com/tac_the_artists_cafe/" alt="Instagram QR">
+                        </div>
+                        <p class="insta-desc">Scan to follow @tac_the_artists_cafe<br>and share your moments!</p>
+                    </div>
+
+                    <!-- Review Card -->
+                    <div class="review-card-new">
+                        <div class="review-stars">
+                            <i data-lucide="star" class="star-icon"></i>
+                            <i data-lucide="star" class="star-icon"></i>
+                            <i data-lucide="star" class="star-icon"></i>
+                            <i data-lucide="star" class="star-icon"></i>
+                            <i data-lucide="star" class="star-icon"></i>
+                        </div>
+                        <div class="review-subtitle">Love our food?</div>
+                        <a href="https://g.page/review" target="_blank" class="review-title-link">Leave a Review</a>
+                    </div>
+                </div>
+
+                </div> <!-- End main-view -->
+
+                <!-- 3. About View -->
+                <div id="about-view" style="display: none; padding: 20px 0; min-height: calc(100vh - 200px); padding-bottom: 80px; position: relative; overflow: hidden; border-top-left-radius: 32px; border-top-right-radius: 32px;">
+                    <!-- Background Circles -->
+                    <div class="bg-circle bg-circle-1"></div>
+                    <div class="bg-circle bg-circle-2"></div>
+                    <div class="bg-circle bg-circle-3"></div>
+
+                    <link rel="stylesheet" href="css/styles.css">
+
+                    <div class="about-header-fresh">
+                        <h2>About Us</h2>
+                        <p>Serving happiness, one slice at a time.</p>
+                    </div>
+
+                    <div class="bento-grid">
+                        <!-- Story -->
+                        <div class="bento-card-fresh bento-full-fresh">
+                            <div class="bento-title-fresh">
+                                <div class="bento-icon-wrap"><i data-lucide="coffee"></i></div>
+                                <span class="bento-title-text">Our Story</span>
+                            </div>
+                            <div class="bento-story-fresh">
+                                <p>Welcome to a cozy, creative space located on the first floor of a beautiful house filled with live plants. We pride ourselves on offering a classy ambiance with nice food, delicious burgers, and good service.</p>
+                                <p>Beyond food, we are a hub for creativity - hosting workshops and featuring a small open stage where anyone can sing, perform, and share their art with the community.</p>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Timings -->
+                        <div class="bento-card-fresh bento-full-fresh" style="padding: 24px 28px;">
+                            <div class="bento-title-fresh" style="margin-bottom: 12px;">
+                                <div class="bento-icon-wrap" style="width: 36px; height: 36px;"><i data-lucide="clock" style="width: 18px;"></i></div>
+                                <span class="bento-title-text" style="font-size: 14px;">Opening Hours</span>
+                            </div>
+                            <div class="timing-row">
+                                <span class="timing-day">Tuesday - Sunday</span>
+                                <span class="timing-hours">4:00 PM - 10:30 PM</span>
+                            </div>
+                            <div class="timing-row">
+                                <span class="timing-day">Monday</span>
+                                <span class="timing-hours" style="color: var(--color-accent);">Closed</span>
+                            </div>
+                        </div>
+
+                        <!-- Call -->
+                        <a href="tel:09947261135" class="bento-card-fresh bento-half-fresh">
+                            <div class="action-icon-fresh"><i data-lucide="phone-call"></i></div>
+                            <div class="action-title">Call Us</div>
+                            <div class="action-sub">099472 61135</div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:info@taccafe.in" class="bento-card-fresh bento-half-fresh">
+                            <div class="action-icon-fresh"><i data-lucide="mail"></i></div>
+                            <div class="action-title">Email Us</div>
+                            <div class="action-sub">info@taccafe.in</div>
+                        </a>
+
+                        <!-- Map -->
+                        <a href="https://maps.app.goo.gl/BdeBQHc8knUjLf9X6" target="_blank" class="bento-card-fresh bento-full-fresh map-card-fresh">
+                            <iframe src="https://maps.google.com/maps?q=TAC%20The%20Artists%20Cafe,%20Thiruvananthapuram&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-overlay-fresh" style="font-size: 12px; white-space: normal; text-align: center;">
+                                <i data-lucide="map-pin" style="flex-shrink: 0;"></i>
+                                Sree Nagar, Sreevaraham Ln, Thiruvananthapuram
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- End about-view -->
+
+                <!-- Footer -->
+                <footer class="app-footer">
+                        <div class="footer-logo">
+                            <i data-lucide="pizza"></i>
+                        </div>
+                        <h3>TAC - The Artists' Cafe</h3>
+                        <p>Serving happiness, one slice at a time.</p>
+                        <div class="footer-bottom">
+                            &copy; 2026 TAC - The Artists' Cafe. All rights reserved.
+                        </div>
+                    </footer>
+            </main>
+        </div>
+    <!-- Food Detail Modal -->
+    <div class="food-modal-overlay" id="foodModal">
+        <div class="food-modal">
+            <button class="food-modal-close" id="foodModalClose">&times;</button>
+            <h2 class="food-modal-title" id="foodModalTitle"></h2>
+            <div class="food-modal-subtitle" id="foodModalSubtitle"></div>
+            <div class="food-modal-desc" id="foodModalDesc"></div>
+            <div class="food-modal-price" id="foodModalPrice"></div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="js/ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
