@@ -249,10 +249,27 @@ window.initNativeScripts = function() {
                     }
                     
                     if(foodModalTitle) foodModalTitle.innerHTML = nameClone.innerHTML.trim();
-                    if(foodModalSubtitle) foodModalSubtitle.textContent = subtitleText;
+                    if(foodModalSubtitle) {
+                        foodModalSubtitle.textContent = subtitleText;
+                        foodModalSubtitle.style.display = subtitleText ? 'block' : 'none';
+                        if (foodModalTitle) {
+                            if (!subtitleText) {
+                                foodModalTitle.style.borderBottom = '1px solid rgba(44,36,27,0.1)';
+                                foodModalTitle.style.paddingBottom = '16px';
+                                foodModalTitle.style.marginBottom = '20px';
+                            } else {
+                                foodModalTitle.style.borderBottom = 'none';
+                                foodModalTitle.style.paddingBottom = '0';
+                                foodModalTitle.style.marginBottom = '4px';
+                            }
+                        }
+                    }
                 }
-                if (descEl && foodModalDesc) foodModalDesc.innerHTML = descEl.innerHTML;
-                else if (foodModalDesc) foodModalDesc.innerHTML = '';
+                
+                if (foodModalDesc) {
+                    foodModalDesc.innerHTML = descEl ? descEl.innerHTML : '';
+                    foodModalDesc.style.display = foodModalDesc.innerHTML.trim() ? 'block' : 'none';
+                }
 
                 let variantsHtml = '';
                 try {
