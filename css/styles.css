@@ -1,4 +1,4 @@
-
+﻿
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -790,13 +790,14 @@ input, textarea {
     border: 3px dashed var(--color-primary);
     border-radius: 20px;
     display: inline-block;
-    background: var(--color-white);
+    background: transparent;
 }
 .instagram-qr-new img {
     width: 160px;
     height: 160px;
     display: block;
     border-radius: 8px;
+    mix-blend-mode: multiply;
 }
 .insta-desc {
     font-size: 15px;
@@ -843,7 +844,6 @@ input, textarea {
     text-decoration: none;
     letter-spacing: -0.5px;
 }
-
 /* Footer */
 .app-footer {
     background-color: var(--color-primary);
@@ -1073,3 +1073,4 @@ input, textarea {
     width: 20px;
     height: 20px;
 }
+
