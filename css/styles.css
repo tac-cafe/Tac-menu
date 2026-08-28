@@ -522,10 +522,9 @@ input, textarea {
 
 .menu-item-name .inline-desc {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--color-icon-secondary);
-    display: block;
-    margin-top: 4px;
+    margin-left: 4px;
 }
 
 .menu-item-name em {

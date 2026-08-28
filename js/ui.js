@@ -231,11 +231,23 @@ window.initNativeScripts = function() {
                 if (nameEl) {
                     const nameClone = nameEl.cloneNode(true);
                     const emTag = nameClone.querySelector('em');
+                    const inlineDescs = nameClone.querySelectorAll('.inline-desc');
                     let subtitleText = '';
+                    
                     if (emTag) {
                         subtitleText = emTag.textContent;
                         emTag.remove();
+                        // Remove inlineDesc that matches the description exactly, but keep others (like those from the name field)
+                        inlineDescs.forEach(span => {
+                            if (span.textContent === `(${subtitleText})`) {
+                                span.remove();
+                            }
+                        });
+                    } else if (inlineDescs.length > 0) {
+                        subtitleText = inlineDescs[0].textContent.replace(/^\((.*)\)$/, '$1');
+                        inlineDescs.forEach(span => span.remove());
                     }
+                    
                     if(foodModalTitle) foodModalTitle.innerHTML = nameClone.innerHTML.trim();
                     if(foodModalSubtitle) foodModalSubtitle.textContent = subtitleText;
                 }

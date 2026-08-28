@@ -111,7 +111,7 @@ function renderMenu(categories, recommended, products) {
                             ${catProducts.map(p => `
                                 <div class="menu-card-item" data-variants="${p.variants ? JSON.stringify(p.variants).replace(/"/g, '&quot;') : '[]'}">
                                     <div class="menu-item-header">
-                                        <h3 class="menu-item-name">${p.name.replace(/\s*\((.*?)\)/, ' <span class="inline-desc">($1)</span>')} ${p.description ? `<em style="font-weight:normal; font-size:14px; color:var(--color-icon-secondary);">${p.description}</em>` : ''}</h3>
+                                        <h3 class="menu-item-name">${p.name.replace(/\s*\((.*?)\)/, ' <span class="inline-desc">($1)</span>')} ${p.description ? `<span class="inline-desc">(${p.description})</span><em style="display:none;">${p.description}</em>` : ''}</h3>
                                         <div class="menu-item-dots"></div>
                                         ${p.variants && p.variants.length > 0 ? 
                                             (function() {
